@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.wso2</groupId>
+    <artifactId>unit_test_tester</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.wso2</groupId>
+                <artifactId>synapse-unit-test-maven-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <id>synapse-unit-test</id>
+                        <phase>test</phase>
+                        <goals>
+                            <goal>SynapseUnitTest</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <synapseServer>
+                        <host>127.0.0.1</host>
+                        <unitTestPort>9007</unitTestPort>
+                        <!--<localServer>-->
+                            <!--<executionScript>/Users/sajithaliyanage/Documents/Projects/WSO2-Products/product-ei/distribution/target/wso2ei-6.5.0-m5-SNAPSHOT/bin/integrator.sh</executionScript>-->
+                        <!--</localServer>-->
+                    </synapseServer>
+                    <testCasesFilePath>${project.basedir}/src/test</testCasesFilePath>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

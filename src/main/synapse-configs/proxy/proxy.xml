@@ -1,0 +1,13 @@
+<proxy xmlns="http://ws.apache.org/ns/synapse" name="proxyTeasssts" startOnLoad="true" statistics="disable" trace="disable" transports="http,https">
+    <target>
+        <inSequence>
+            <send>
+                <endpoint name="QueryDoctorEP" xmlns="http://ws.apache.org/ns/synapse">
+                    <http method="get" uri-template="http://localhost:9091/hello/sayHello"/>
+                </endpoint>
+            </send>
+            <respond />
+        </inSequence>
+    </target>
+    <description />
+</proxy>

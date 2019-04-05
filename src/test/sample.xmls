@@ -1,0 +1,67 @@
+<synapse-unit-test>
+    <artifacts>
+        <!-- One or more xml files contains synapse configurations -->
+        <test-artifact>
+            <artifact>File Path</artifact>
+        </test-artifact>
+        <supportive-artifacts>
+            <artifact>File Path</artifact>
+        </supportive-artifacts>
+    </artifacts>
+
+    <test-cases>
+        <!-- One or more test cases with inputs and assertions -->
+        <test-case>
+            <input>
+                <request-path> </request-path>
+                <payload> </payload>
+                <properties>
+                    <property name="prop1" value="val1"/>
+                    <property name="prop2" scope="axis2" value="val2"/>
+                    <property name="prop3" scope="transport" value="val3"/>
+                </properties>
+            </input>
+            <assertions>
+                <assertEquals>
+                    <actual> </actual>
+                    <expected> </expected>
+                    <message> </message>
+                </assertEquals>
+
+                <assertNotNull>
+                    <actual> </actual>
+                    <message> </message>
+                </assertNotNull>
+            </assertions>
+        </test-case>
+    </test-cases>
+
+    <mock-services>
+        <!-- One or more mock services with multiple resources -->
+        <mock-service>
+            <service-name> </service-name>
+            <port> </port>
+            <context> </context>
+            <resources>
+                <resource>
+                    <sub-context> </sub-context>
+                    <method> </method>
+                    <request>
+                        <payload> </payload>
+                        <headers>
+                            <header name="header2" value="val2"/>
+                        </headers>
+                    </request>
+                    <response>
+                        <payload> </payload>
+                        <headers>
+                            <header name="header1" value="val1"/>
+                        </headers>
+                    </response>
+                </resource>
+            </resources>
+        </mock-service>
+    </mock-services>
+</synapse-unit-test>
+
+

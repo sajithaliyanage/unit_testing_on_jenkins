@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<synapse-unit-test>
+    <artifacts>
+        <!-- One or more xml files contains synapse configurations -->
+        <test-artifact>
+            <artifact>src/main/synapse-configs/sequences/sequence.xml</artifact>
+        </test-artifact>
+        <supportive-artifacts>
+
+        </supportive-artifacts>
+    </artifacts>
+
+    <test-cases>
+        <test-case>
+            <input>
+                <payload>
+                    <![CDATA[
+                        <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services.samples" xmlns:xsd="http://services.samples/xsd">
+                           <soapenv:Header />
+                           <soapenv:Body>
+                              <ser:getQuote>
+                                 <!--Optional:-->
+                                 <ser:request>
+                                    <!--Optional:-->
+                                    <xsd:symbol>WSO2</xsd:symbol>
+                                 </ser:request>
+                              </ser:getQuote>
+                           </soapenv:Body>
+                        </soapenv:Envelope>
+                    ]]>
+                </payload>
+                <properties>
+                    <property name="prop1" value="val1"/>
+                    <property name="prop2" scope="axis2" value="val2"/>
+                    <property name="prop3" scope="transport" value="val3"/>
+                </properties>
+            </input>
+
+            <assertions>
+                <!-- assert for payload-->
+                <assertEquals>
+                    <actual>$body</actual>
+                    <expected>
+                        <![CDATA[
+                            <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://services.samples/xsd" xmlns:ser="http://services.samples">
+                               <soapenv:Header/>
+                               <soapenv:Body>
+                                  <ser:getQuote  >
+                                     <!--Optional:-->
+                                     <ser:request>
+                                        <!--Optional:-->
+                                        <xsd:symbol>WSO2</xsd:symbol>
+                                        <xsd:symbol>SUN</xsd:symbol>
+                                     </ser:request>
+                                  </ser:getQuote  >
+                               </soapenv:Body>
+                            </soapenv:Envelope>
+                        ]]>
+                    </expected>
+                    <message>Expected payload not found</message>
+                </assertEquals>
+
+                <assertNotNull>
+                    <actual>$body</actual>
+                    <message>Payload is not available</message>
+                </assertNotNull>
+
+                <!-- assert for properties-->
+                <assertNotNull>
+                    <actual>$ctx:prop1</actual>
+                    <message>prop1 not found</message>
+                </assertNotNull>
+
+                <assertEquals>
+                    <actual>$ctx:prop1</actual>
+                    <expected>val1</expected>
+                    <message>Expected property value not found</message>
+                </assertEquals>
+
+                <assertEquals>
+                    <actual>$axis2:prop2</actual>
+                    <expected>val2</expected>
+                    <message>Expected property value not found</message>
+                </assertEquals>
+
+                <assertEquals>
+                    <actual>$trp:prop3</actual>
+                    <expected>val3</expected>
+                    <message>Expected property value not found</message>
+                </assertEquals>
+            </assertions>
+        </test-case>
+    </test-cases>
+</synapse-unit-test>

@@ -6,9 +6,6 @@
         <test-artifact>
             <artifact>src/main/synapse-configs/sequences/sequence.xml</artifact>
         </test-artifact>
-        <supportive-artifacts>
-
-        </supportive-artifacts>
     </artifacts>
 
     <test-cases>
@@ -93,3 +90,4 @@
         </test-case>
     </test-cases>
 </synapse-unit-test>
+

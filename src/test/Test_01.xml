@@ -1,0 +1,29 @@
+<synapse-unit-test>
+    <artifacts>
+        <!-- One or more xml files contains synapse configurations -->
+        <test-artifact>
+            <artifact>src/main/synapse-configs/proxy/HelloWorld.xml</artifact>
+        </test-artifact>
+
+    </artifacts>
+
+    <test-cases>
+        <!-- One or more test cases with inputs and assertions -->
+        <test-case>
+            <assertions>
+                <assertEquals>
+                    <actual>$body</actual>
+                    <expected>{"Hello":"World"}</expected>
+                    <message>Failed the body assertion</message>
+                </assertEquals>
+
+                <assertNotNull>
+                    <actual>$body</actual>
+                    <message>Failed the body assertion (not null)</message>
+                </assertNotNull>
+            </assertions>
+        </test-case>
+    </test-cases>
+</synapse-unit-test>
+
+

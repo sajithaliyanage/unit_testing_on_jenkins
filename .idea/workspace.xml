@@ -2,16 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="536df541-98b0-47be-b777-20baee1b281d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/synapse-configs/proxy/HelloWorld.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/Test_01.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/synapse-configs/proxy/proxy.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/API_SynapseTestCaseFile.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/DescriptorFile2.xmls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/SynapseTestCaseFile2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/Test_00.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/api_2_SynapseTestCaseFile3.xmls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/proxy_SynapseTestCaseFile3.xmls" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/synapse-configs/api/PhoneVerifyAPI.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/synapse-configs/api/ScienceLabAPI.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/synapse-configs/endpoints/EchoSoapEP.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/synapse-configs/endpoints/NumberAdditionEP.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/synapse-configs/endpoints/NumberDivisionEP.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/synapse-configs/endpoints/PhoneVerifyEP.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/synapse-configs/endpoints/ScienceLabEP.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/synapse-configs/proxy/ArithmaticOperationService.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/synapse-configs/proxy/EngineerEmployeeService.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/synapse-configs/proxy/ProxyForEchoService.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/Test_02.xmls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/Test_03.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/Test_04.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/Test_05_Dynamic_response.xmls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/Test_06.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/synapse-configs/api/user_api.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/synapse-configs/api/user_api2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/synapse-configs/endpoints/UsersHttpEP.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/unit_test_tester-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/unit_test_tester-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,31 +36,85 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/Test_00.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+            <state relative-caret-position="374">
+              <caret line="22" column="65" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/Test_01.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/sequences/sequence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+            <state relative-caret-position="187">
+              <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/test/Test_05_Dynamic_response.xmls">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/proxy/EngineerEmployeeService.xml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/sample.xmls">
+        <entry file="file://$PROJECT_DIR$/src/test/Test_06.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="16" selection-end-line="67" />
+            <state relative-caret-position="185">
+              <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/api/ScienceLabAPI.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="27" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/Test_03.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="884">
+              <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/Test_04.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/api/PhoneVerifyAPI.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="52" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/Test_01.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -65,12 +130,21 @@
         <option value="$PROJECT_DIR$/src/test/SynapseTestCaseFile2.xml" />
         <option value="$PROJECT_DIR$/src/test/Test_00.xml" />
         <option value="$PROJECT_DIR$/src/test/Test_01.xml" />
+        <option value="$PROJECT_DIR$/src/main/synapse-configs/proxy/ProxyForEchoService.xml" />
+        <option value="$PROJECT_DIR$/src/test/Test_02.xml" />
+        <option value="$PROJECT_DIR$/src/test/Test_03.xml" />
+        <option value="$PROJECT_DIR$/src/test/Test_04.xml" />
+        <option value="$PROJECT_DIR$/src/main/synapse-configs/api/PhoneVerifyAPI.xml" />
+        <option value="$PROJECT_DIR$/src/main/synapse-configs/api/ScienceLabAPI.xml" />
+        <option value="$PROJECT_DIR$/src/test/Test_05.xml" />
+        <option value="$PROJECT_DIR$/src/test/Test_06.xml" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="1050" />
+    <option name="height" value="947" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -111,7 +185,31 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="synapse-configs" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="unit_test_tester" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unit_testing_on_jenkins" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="synapse-configs" type="462c0819:PsiDirectoryNode" />
+              <item name="endpoints" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="unit_test_tester" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unit_testing_on_jenkins" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="synapse-configs" type="462c0819:PsiDirectoryNode" />
               <item name="proxy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="unit_test_tester" type="b2602c69:ProjectViewProjectNode" />
+              <item name="unit_testing_on_jenkins" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="synapse-configs" type="462c0819:PsiDirectoryNode" />
+              <item name="sequences" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="unit_test_tester" type="b2602c69:ProjectViewProjectNode" />
@@ -126,7 +224,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554705027780" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554893848986" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -134,7 +232,10 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test" />
       <recent name="$PROJECT_DIR$/src/main/synapse-configs/proxy" />
+      <recent name="$PROJECT_DIR$/src/main/synapse-configs/api" />
+      <recent name="$PROJECT_DIR$/src/main/synapse-configs/endpoints" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -164,7 +265,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25274727" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -183,7 +283,7 @@
       <window_info anchor="bottom" id="CheckStyle" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="SonarLint" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32959184" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="FindBugs-IDEA" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -203,13 +303,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/api/user_api2.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/sample.xmls">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="16" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/api/user_api.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -223,13 +316,52 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/endpoints/UsersHttpEP.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/endpoints/UsersHttpEP2.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/Test_00.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/proxy/ProxyForEchoService.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        <state relative-caret-position="17">
+          <caret line="1" column="32" selection-start-line="1" selection-start-column="32" selection-end-line="1" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/endpoints/NumberAdditionEP.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/endpoints/EchoSoapEP.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/sample.xmls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/endpoints/PhoneVerifyEP.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/endpoints/ScienceLabEP.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/proxy/ArithmaticOperationService.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Test_02.xmls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1207">
+          <caret line="71" column="20" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -237,6 +369,65 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Test_03.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="52" column="19" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Test_04.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/api/PhoneVerifyAPI.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/api/ScienceLabAPI.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Test_05_Dynamic_response.xmls">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/proxy/EngineerEmployeeService.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Test_06.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="40" column="50" lean-forward="true" selection-start-line="40" selection-start-column="50" selection-end-line="40" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/Test_00.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="65" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/synapse-configs/sequences/sequence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>

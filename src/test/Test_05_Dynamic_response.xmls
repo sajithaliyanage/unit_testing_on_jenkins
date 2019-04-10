@@ -1,0 +1,53 @@
+<synapse-unit-test>
+    <artifacts>
+        <!-- One or more xml files contains synapse configurations -->
+        <test-artifact>
+            <artifact>src/main/synapse-configs/api/ScienceLabAPI.xml</artifact>
+        </test-artifact>
+        <supportive-artifacts>
+            <artifact>src/main/synapse-configs/endpoints/ScienceLabEP.xml</artifact>
+        </supportive-artifacts>
+    </artifacts>
+
+    <test-cases>
+        <!-- One or more test cases with inputs and assertions -->
+        <test-case>
+            <input>
+                <request-path>/users</request-path>
+                <payload>
+                    <![CDATA[
+                    <user>
+                        <name>Sam</name>
+                        <job>Scientist</job>
+                    </user>]]>
+                </payload>
+                <properties>
+                    <property name="Content-Type" scope="transport" value="text/xml"/>
+                </properties>
+            </input>
+            <assertions>
+                <assertEquals>
+                    <actual>$body</actual>
+                    <expected>
+                        <![CDATA[
+                        <response>
+                            <status>successful</status>
+                            <id>947</id>
+                            <name>Sam</name>
+                            <job>Scientist</job>
+                            <createdAt>2019-04-10T05:32:47.471Z</createdAt>
+                        </response>]]>
+                    </expected>
+                    <message>Failed the body assertion</message>
+                </assertEquals>
+
+                <assertNotNull>
+                    <actual>$body</actual>
+                    <message>Failed the body assertion (not null)</message>
+                </assertNotNull>
+            </assertions>
+        </test-case>
+    </test-cases>
+</synapse-unit-test>
+
+

@@ -1,0 +1,92 @@
+<synapse-unit-test>
+    <artifacts>
+        <!-- One or more xml files contains synapse configurations -->
+        <test-artifact>
+            <artifact>src/main/synapse-configs/proxy/ArithmaticOperationService.xml</artifact>
+        </test-artifact>
+        <supportive-artifacts>
+            <artifact>src/main/synapse-configs/endpoints/NumberDivisionEP.xml</artifact>
+            <artifact>src/main/synapse-configs/endpoints/NumberAdditionEP.xml</artifact>
+        </supportive-artifacts>
+    </artifacts>
+
+    <test-cases>
+        <!-- One or more test cases with inputs and assertions -->
+        <test-case>
+            <input>
+                <payload>
+                    <![CDATA[
+                        <ArithmaticOperation>
+                          <Operation>Add</Operation>
+                          <Arg1>10</Arg1>
+                          <Arg2>25</Arg2>
+                        </ArithmaticOperation>
+                ]]>
+                </payload>
+                <properties>
+                    <property name="Content-Type" scope="transport" value="text/xml"/>
+                </properties>
+            </input>
+            <assertions>
+                <assertEquals>
+                    <actual>$body</actual>
+                    <expected>
+                        <![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+                            <SOAP-ENV:Envelope xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:s='http://www.w3.org/2001/XMLSchema'>
+                                <SOAP-ENV:Body>
+                                    <AddIntegerResponse xmlns="http://tempuri.org">
+                                        <AddIntegerResult>35</AddIntegerResult>
+                                    </AddIntegerResponse>
+                                </SOAP-ENV:Body>
+                            </SOAP-ENV:Envelope>]]>
+                    </expected>
+                    <message>Failed the body assertion</message>
+                </assertEquals>
+
+                <assertNotNull>
+                    <actual>$body</actual>
+                    <message>Failed the body assertion (not null)</message>
+                </assertNotNull>
+            </assertions>
+        </test-case>
+        <test-case>
+            <input>
+                <payload>
+                    <![CDATA[
+                        <ArithmaticOperation>
+                          <Operation>Divide</Operation>
+                          <Arg1>25</Arg1>
+                          <Arg2>5</Arg2>
+                        </ArithmaticOperation>
+                ]]>
+                </payload>
+                <properties>
+                    <property name="Content-Type" scope="transport" value="text/xml"/>
+                </properties>
+            </input>
+            <assertions>
+                <assertEquals>
+                    <actual>$body</actual>
+                    <expected>
+                        <![CDATA[<?xml version="1.0" encoding="UTF-8" ?>
+                            <SOAP-ENV:Envelope xmlns:SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:s='http://www.w3.org/2001/XMLSchema'>
+                                <SOAP-ENV:Body>
+                                    <DivideIntegerResponse xmlns="http://tempuri.org">
+                                        <DivideIntegerResult>5</DivideIntegerResult>
+                                    </DivideIntegerResponse>
+                                </SOAP-ENV:Body>
+                            </SOAP-ENV:Envelope>]]>
+                    </expected>
+                    <message>Failed the body assertion</message>
+                </assertEquals>
+
+                <assertNotNull>
+                    <actual>$body</actual>
+                    <message>Failed the body assertion (not null)</message>
+                </assertNotNull>
+            </assertions>
+        </test-case>
+    </test-cases>
+</synapse-unit-test>
+
+

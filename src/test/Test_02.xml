@@ -1,0 +1,75 @@
+<synapse-unit-test>
+    <artifacts>
+        <!-- One or more xml files contains synapse configurations -->
+        <test-artifact>
+            <artifact>src/main/synapse-configs/proxy/ProxyForEchoService.xml</artifact>
+        </test-artifact>
+        <supportive-artifacts>
+            <artifact>src/main/synapse-configs/endpoints/EchoSoapEP.xml</artifact>
+        </supportive-artifacts>
+    </artifacts>
+
+    <test-cases>
+        <!-- One or more test cases with inputs and assertions -->
+        <test-case>
+            <input>
+                <payload>
+                    <![CDATA[
+                    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+                        <soapenv:Header/>
+                        <soapenv:Body>
+                            <echo:echoString xmlns:echo="http://echo.services.core.carbon.wso2.org">
+                                <in>Hello</in>
+                            </echo:echoString>
+                        </soapenv:Body>
+                    </soapenv:Envelope>]]>
+                </payload>
+                <properties>
+                    <property name="SOAPAction" scope="transport" value="urn:echoString"/>
+                </properties>
+            </input>
+            <assertions>
+                <assertEquals>
+                    <actual>$body</actual>
+                    <expected>
+                        <![CDATA[<?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns:echoStringResponse xmlns:ns="http://echo.services.core.carbon.wso2.org"><return>Hello</return></ns:echoStringResponse></soapenv:Body></soapenv:Envelope>]]>
+                    </expected>
+                    <message>Failed the body assertion</message>
+                </assertEquals>
+
+                <assertNotNull>
+                    <actual>$body</actual>
+                    <message>Failed the body assertion (not null)</message>
+                </assertNotNull>
+            </assertions>
+        </test-case>
+    </test-cases>
+
+    <mock-services>
+        <!-- One or more mock services with multiple resources -->
+        <mock-service>
+            <service-name>EchoSoapEP</service-name>
+            <port>9190</port>
+            <context>/services/echo</context>
+            <resources>
+                <resource>
+                    <sub-context>/</sub-context>
+                    <method>POST</method>
+                    <request>
+                        <payload>
+                            <![CDATA[
+                                <?xmlversion='1.0'encoding='ISO-8859-1'?><soapenv:Envelopexmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><textxmlns="http://ws.apache.org/commons/ns/payload">&lt;soapenv:Envelopexmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">&lt;soapenv:Header/>&lt;soapenv:Body>&lt;echo:echoStringxmlns:echo="http://echo.services.core.carbon.wso2.org">&lt;in>Hello&lt;/in>&lt;/echo:echoString>&lt;/soapenv:Body>&lt;/soapenv:Envelope></text></soapenv:Body></soapenv:Envelope>]]>
+                        </payload>
+                    </request>
+                    <response>
+                        <payload>
+                            <![CDATA[<?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns:echoStringResponse xmlns:ns="http://echo.services.core.carbon.wso2.org"><return>Hello</return></ns:echoStringResponse></soapenv:Body></soapenv:Envelope>]]>
+                        </payload>
+                    </response>
+                </resource>
+            </resources>
+        </mock-service>
+    </mock-services>
+</synapse-unit-test>
+
+

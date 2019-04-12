@@ -14,6 +14,7 @@
         <test-case>
             <input>
                 <request-path>/validate/7575449510</request-path>
+                <request-method>GET</request-method>
                 <properties>
                     <property name="Content-Type" scope="transport" value="text/xml"/>
                 </properties>
@@ -22,9 +23,8 @@
                 <assertEquals>
                     <actual>$body</actual>
                     <expected>
-                        <![CDATA[<?xmlversion="1.0"encoding="utf-8"?>
-                            <PhoneReturnxmlns:xsd
-                                ="http://www.w3.org/2001/XMLSchema"xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"xmlns="http://ws.cdyne.com/PhoneVerify/query">
+                        <![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+                            <PhoneReturn xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ws.cdyne.com/PhoneVerify/query">
                                 <Company>LEVEL3COMMUNICATIONS,LLC-</Company>
                                 <Valid>true</Valid>
                                 <Use>Assignedtoacodeholderfornormaluse.</Use>

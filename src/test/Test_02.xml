@@ -2,7 +2,7 @@
     <artifacts>
         <!-- One or more xml files contains synapse configurations -->
         <test-artifact>
-            <artifact>src/main/synapse-configs/proxy/ProxyForEchoService.xml</artifact>
+            <artifact>src/main/synapse-configs/api/echo_api.xml</artifact>
         </test-artifact>
         <supportive-artifacts>
             <artifact>src/main/synapse-configs/endpoints/EchoSoapEP.xml</artifact>
@@ -13,26 +13,14 @@
         <!-- One or more test cases with inputs and assertions -->
         <test-case>
             <input>
-                <payload>
-                    <![CDATA[
-                    <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
-                        <soapenv:Header/>
-                        <soapenv:Body>
-                            <echo:echoString xmlns:echo="http://echo.services.core.carbon.wso2.org">
-                                <in>Hello</in>
-                            </echo:echoString>
-                        </soapenv:Body>
-                    </soapenv:Envelope>]]>
-                </payload>
-                <properties>
-                    <property name="SOAPAction" scope="transport" value="urn:echoString"/>
-                </properties>
+                <request-path>/</request-path>
+                <request-method>GET</request-method>
             </input>
             <assertions>
                 <assertEquals>
                     <actual>$body</actual>
                     <expected>
-                        <![CDATA[<?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns:echoStringResponse xmlns:ns="http://echo.services.core.carbon.wso2.org"><return>Hello</return></ns:echoStringResponse></soapenv:Body></soapenv:Envelope>]]>
+                        {"fname":"Peter","lname":"Stallone", "age":22,"address":{"line":"20 Palm Grove","city":"Colombo 03","country":"Sri Lanka"}}
                     </expected>
                     <message>Failed the body assertion</message>
                 </assertEquals>
@@ -48,23 +36,16 @@
     <mock-services>
         <!-- One or more mock services with multiple resources -->
         <mock-service>
-            <service-name>EchoSoapEP</service-name>
+            <service-name>Hospital</service-name>
             <port>9190</port>
-            <context>/services/echo</context>
+            <context>/hello/sayHello</context>
             <resources>
                 <resource>
                     <sub-context>/</sub-context>
-                    <method>POST</method>
-                    <request>
-                        <payload>
-                            <![CDATA[
-                                <?xmlversion='1.0'encoding='ISO-8859-1'?><soapenv:Envelopexmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><textxmlns="http://ws.apache.org/commons/ns/payload">&lt;soapenv:Envelopexmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">&lt;soapenv:Header/>&lt;soapenv:Body>&lt;echo:echoStringxmlns:echo="http://echo.services.core.carbon.wso2.org">&lt;in>Hello&lt;/in>&lt;/echo:echoString>&lt;/soapenv:Body>&lt;/soapenv:Envelope></text></soapenv:Body></soapenv:Envelope>]]>
-                        </payload>
-                    </request>
+                    <method>GET</method>
                     <response>
                         <payload>
-                            <![CDATA[<?xml version='1.0' encoding='UTF-8'?><soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"><soapenv:Body><ns:echoStringResponse xmlns:ns="http://echo.services.core.carbon.wso2.org"><return>Hello</return></ns:echoStringResponse></soapenv:Body></soapenv:Envelope>]]>
-                        </payload>
+                            {"fname":"Peter", "lname":"Stallone", "age":22, "address":{"line":"20 Palm Grove", "city":"Colombo 03", "country":"Sri Lanka"}}                        </payload>
                     </response>
                 </resource>
             </resources>

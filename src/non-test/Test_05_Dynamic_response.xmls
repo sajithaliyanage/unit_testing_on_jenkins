@@ -14,6 +14,7 @@
         <test-case>
             <input>
                 <request-path>/users</request-path>
+                <request-method>POST</request-method>
                 <payload>
                     <![CDATA[
                     <user>

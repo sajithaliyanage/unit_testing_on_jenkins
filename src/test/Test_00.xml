@@ -43,14 +43,14 @@
                             <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://services.samples/xsd" xmlns:ser="http://services.samples">
                                <soapenv:Header/>
                                <soapenv:Body>
-                                  <ser:getQuote  >
+                                  <ser:getQuote>
                                      <!--Optional:-->
                                      <ser:request>
                                         <!--Optional:-->
                                         <xsd:symbol>WSO2</xsd:symbol>
                                         <xsd:symbol>SUN</xsd:symbol>
                                      </ser:request>
-                                  </ser:getQuote  >
+                                  </ser:getQuote>
                                </soapenv:Body>
                             </soapenv:Envelope>
                         ]]>
